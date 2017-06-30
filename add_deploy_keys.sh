@@ -19,13 +19,13 @@ addIdentities() {
     while [ $i -ne 20 ]
     do
 	i=`expr $i + 1`
-	local key_name="WERCKER_ADD_GITHUB_DEPLOY_KEYS_KEY${i}"
-	local private_key=$(eval echo '"$'$key_name'"');
-	if [ -n "${private_key}" ]; then
+	local key_name=$(eval echo "\$WERCKER_ADD_GITHUB_DEPLOY_KEYS_KEY${i}")
+	if [ -n "${key_name}" ]; then
+	    local private_key=$(eval echo '"$'$key_name'"');
 	    local ssh_key_file=$(mktemp)
 	    echo -e "${private_key}" > $ssh_key_file
 	    chmod 0600 $ssh_key_file
-	    echo "[Add key${i}] `ssh-keygen -E md5 -lf $ssh_key_file`"
+	    echo "[Add key${i} `ssh-keygen -E md5 -lf $ssh_key_file`"
 	    echo "    IdentityFile $ssh_key_file" >> $config
 	fi
     done
