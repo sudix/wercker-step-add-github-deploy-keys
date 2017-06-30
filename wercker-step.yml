@@ -1,0 +1,63 @@
+name: add-github-deploy-keys
+version: 0.1.0
+properties:
+  key1:
+    type: string
+    required: true
+  key2:
+    type: string
+    required: false
+  key3:
+    type: string
+    required: false
+  key4:
+    type: string
+    required: false
+  key5:
+    type: string
+    required: false
+  key6:
+    type: string
+    required: false
+  key7:
+    type: string
+    required: false
+  key8:
+    type: string
+    required: false
+  key9:
+    type: string
+    required: false
+  key10:
+    type: string
+    required: false
+  key11:
+    type: string
+    required: false
+  key12:
+    type: string
+    required: false
+  key13:
+    type: string
+    required: false
+  key14:
+    type: string
+    required: false
+  key15:
+    type: string
+    required: false
+  key16:
+    type: string
+    required: false
+  key17:
+    type: string
+    required: false
+  key18:
+    type: string
+    required: false
+  key19:
+    type: string
+    required: false
+  key20:
+    type: string
+    required: false
