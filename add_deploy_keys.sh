@@ -25,7 +25,7 @@ addIdentities() {
 	    local ssh_key_file=$(mktemp)
 	    echo -e "${private_key}" > $ssh_key_file
 	    chmod 0600 $ssh_key_file
-	    echo "[Add key${i} `ssh-keygen -E md5 -lf $ssh_key_file`"
+	    echo "Add [key${i}] `ssh-keygen -E md5 -lf $ssh_key_file`"
 	    echo "    IdentityFile $ssh_key_file" >> $config
 	fi
     done
