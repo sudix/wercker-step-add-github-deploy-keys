@@ -29,10 +29,6 @@ addIdentities() {
 	    echo "    IdentityFile $ssh_key_file" >> $config
 	fi
     done
-
-    echo -e "\n-------- $config"
-    cat $config
-    echo "--------"
 }
 
 main () {
